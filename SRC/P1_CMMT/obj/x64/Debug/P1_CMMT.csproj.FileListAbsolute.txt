@@ -1,0 +1,10 @@
+D:\testttt\SRC\P1_CMMT\obj\x64\Debug\P1_CMMT.AboutFrm.resources
+D:\testttt\SRC\P1_CMMT\obj\x64\Debug\P1_CMMT.IOFrm.resources
+D:\testttt\SRC\P1_CMMT\obj\x64\Debug\P1_CMMT.MainForm.resources
+D:\testttt\SRC\P1_CMMT\obj\x64\Debug\P1_CMMT.Properties.Resources.resources
+D:\testttt\SRC\P1_CMMT\obj\x64\Debug\P1_CMMT.Reg.resources
+D:\testttt\SRC\P1_CMMT\obj\x64\Debug\P1_CMMT.SettingFrm.resources
+D:\testttt\SRC\P1_CMMT\obj\x64\Debug\P1_CMMT.SplashFrm.resources
+D:\testttt\SRC\P1_CMMT\obj\x64\Debug\P1_CMMT.VideoFrm.resources
+D:\testttt\SRC\P1_CMMT\obj\x64\Debug\P1_CMMT.csproj.GenerateResource.cache
+D:\testttt\SRC\P1_CMMT\obj\x64\Debug\P1_CMMT.csproj.CoreCompileInputs.cache
