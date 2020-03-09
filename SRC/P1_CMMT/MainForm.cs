@@ -1138,8 +1138,44 @@ namespace P1_CMMT
                         bool isBox1OK=imgProcess.CountNum(stitchImg, out xld, out int tempNum,out HTuple NGLengths,out HTuple NGChannels);
 
 
+                        Global.Box1Num += tempNum;
+
+
+
                         if (!isBox1OK)
                         {
+                            //这里加入一段程序
+                            //作用是将前面20个球内，如果在10、11流道里出现NG的话，去掉他们。靠其他流道的球来判断此次是ok，还是NG，
+                            //并且将10流道，11流道分别改名为100,110，会在log里记录
+                            if(Global.Box1Num<20)
+                            {
+                                int length = NGChannels.Length;
+                                for(int i=0;i<length; i++)
+                                {
+                                    if(NGChannels[i]==10.0)
+                                    {
+                                        NGChannels[i] = 100;
+                                    }
+                                    if (NGChannels[i] == 11.0)
+                                    {
+                                        NGChannels[i] = 110;
+                                    }
+                                }
+
+                                isBox1OK = true;    //假设这次是OK，如果下面循环程序发现这次里面还有其他流道有NG，那这次判断为NG
+
+                                for(int i=0;i<length;i++)
+                                {
+                                    if(NGChannels[i]!=100.0&&NGChannels[i]!=110.0)
+                                    {
+                                        isBox1OK = false;
+                                    }                                    
+                                }
+                            }
+
+
+
+
                             //这里拿到NG小球直径NGLengths 和它所在流道NGChannels   、、、保存到log里吧,还有显示在主界面那个listbox里
                             string NGBallsRs = NGChannels.ToString();
                             string NGBallsChannels = NGChannels.ToString();
@@ -1157,9 +1193,7 @@ namespace P1_CMMT
                         
 
 
-
-                        Global.Box1Num += tempNum;
-
+                                           
                         Global.box1OKNG = Global.box1OKNG && isBox1OK;   //每次处理是否好的取并，只要有坏球就是false
 
                         //图像显示在界面上

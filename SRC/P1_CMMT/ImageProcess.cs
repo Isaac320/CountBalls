@@ -60,11 +60,138 @@ namespace P1_CMMT
 
 
 
+        //public void Count_Num(HObject ho_MixedImage1, out HObject ho_Contours, out HTuple hv_Number)
+        //{
+
+        //    // Local iconic variables 
+        //    HObject ho_Region, ho_RegionOpening, ho_ConnectedRegions;
+        //    HObject ho_Rectangle1, ho_Rectangle2, ho_Rectangle3, ho_RegionUnion;
+        //    HObject ho_ConnectedRegions1, ho_DestRegions, ho_RegionDifference;
+        //    HObject ho_RegionUnion1, ho_ConnectedRegions2, ho_DestRegions1;
+        //    HObject ho_RegionUnion2, ho_RegionIntersection, ho_ConnectedRegions3;
+        //    HObject ho_SelectedRegions, ho_RegionUnion3;
+
+        //    // Local control variables 
+
+        //    HTuple hv_Area = new HTuple(), hv_Row = new HTuple();
+        //    HTuple hv_Column = new HTuple();
+        //    // Initialize local and output iconic variables 
+        //    HOperatorSet.GenEmptyObj(out ho_Contours);
+        //    HOperatorSet.GenEmptyObj(out ho_Region);
+        //    HOperatorSet.GenEmptyObj(out ho_RegionOpening);
+        //    HOperatorSet.GenEmptyObj(out ho_ConnectedRegions);
+        //    HOperatorSet.GenEmptyObj(out ho_Rectangle1);
+        //    HOperatorSet.GenEmptyObj(out ho_Rectangle2);
+        //    HOperatorSet.GenEmptyObj(out ho_Rectangle3);
+        //    HOperatorSet.GenEmptyObj(out ho_RegionUnion);
+        //    HOperatorSet.GenEmptyObj(out ho_ConnectedRegions1);
+        //    HOperatorSet.GenEmptyObj(out ho_DestRegions);
+        //    HOperatorSet.GenEmptyObj(out ho_RegionDifference);
+        //    HOperatorSet.GenEmptyObj(out ho_RegionUnion1);
+        //    HOperatorSet.GenEmptyObj(out ho_ConnectedRegions2);
+        //    HOperatorSet.GenEmptyObj(out ho_DestRegions1);
+        //    HOperatorSet.GenEmptyObj(out ho_RegionUnion2);
+        //    HOperatorSet.GenEmptyObj(out ho_RegionIntersection);
+        //    HOperatorSet.GenEmptyObj(out ho_ConnectedRegions3);
+        //    HOperatorSet.GenEmptyObj(out ho_SelectedRegions);
+        //    HOperatorSet.GenEmptyObj(out ho_RegionUnion3);
+        //    //threshold (MixedImage1, Region, 0, 100)
+
+        //    ho_Region.Dispose();
+        //    HOperatorSet.FastThreshold(ho_MixedImage1, out ho_Region, 0, 80, 20);
+        //    ho_RegionOpening.Dispose();
+        //    HOperatorSet.OpeningRectangle1(ho_Region, out ho_RegionOpening, 100, 1);
+
+        //    ho_ConnectedRegions.Dispose();
+        //    HOperatorSet.Connection(ho_Region, out ho_ConnectedRegions);
+        //    ho_Rectangle1.Dispose();
+        //    HOperatorSet.GenRectangle1(out ho_Rectangle1, 0, 0, 1000, 8192);
+        //    ho_Rectangle2.Dispose();
+        //    HOperatorSet.GenRectangle1(out ho_Rectangle2, 1000, 0, 2000, 8192);
+        //    ho_Rectangle3.Dispose();
+        //    HOperatorSet.GenRectangle1(out ho_Rectangle3, 2000, 0, 3000, 8192);
+
+
+        //    ho_RegionUnion.Dispose();
+        //    HOperatorSet.Union2(ho_Rectangle1, ho_Region, out ho_RegionUnion);
+        //    ho_ConnectedRegions1.Dispose();
+        //    HOperatorSet.Connection(ho_RegionUnion, out ho_ConnectedRegions1);
+        //    ho_DestRegions.Dispose();
+        //    HOperatorSet.SelectRegionPoint(ho_ConnectedRegions1, out ho_DestRegions, 500,
+        //        4096);
+        //    ho_RegionDifference.Dispose();
+        //    HOperatorSet.Difference(ho_Rectangle2, ho_DestRegions, out ho_RegionDifference
+        //        );
+
+        //    ho_RegionUnion1.Dispose();
+        //    HOperatorSet.Union2(ho_Rectangle3, ho_Region, out ho_RegionUnion1);
+        //    ho_ConnectedRegions2.Dispose();
+        //    HOperatorSet.Connection(ho_RegionUnion1, out ho_ConnectedRegions2);
+        //    ho_DestRegions1.Dispose();
+        //    HOperatorSet.SelectRegionPoint(ho_ConnectedRegions2, out ho_DestRegions1, 2500,
+        //        4096);
+
+        //    ho_RegionUnion2.Dispose();
+        //    HOperatorSet.Union2(ho_DestRegions1, ho_RegionDifference, out ho_RegionUnion2
+        //        );
+        //    ho_RegionIntersection.Dispose();
+        //    HOperatorSet.Intersection(ho_Region, ho_RegionUnion2, out ho_RegionIntersection
+        //        );
+
+        //    ho_ConnectedRegions3.Dispose();
+        //    HOperatorSet.Connection(ho_RegionIntersection, out ho_ConnectedRegions3);
+
+        //    ho_SelectedRegions.Dispose();
+        //    HOperatorSet.SelectShape(ho_ConnectedRegions3, out ho_SelectedRegions, "area",
+        //        "and", 1000, 1000000);
+
+        //    ho_RegionUnion3.Dispose();
+        //    HOperatorSet.Union1(ho_SelectedRegions, out ho_RegionUnion3);
+
+        //    ho_Contours.Dispose();
+        //    HOperatorSet.GenContourRegionXld(ho_RegionUnion3, out ho_Contours, "border");
+
+        //    HOperatorSet.CountObj(ho_SelectedRegions, out hv_Number);
+
+        //    if ((int)(new HTuple(hv_Number.TupleEqual(1))) != 0)
+        //    {
+        //        HOperatorSet.AreaCenter(ho_RegionUnion3, out hv_Area, out hv_Row, out hv_Column);
+        //        if ((int)(new HTuple(hv_Area.TupleEqual(0))) != 0)
+        //        {
+        //            hv_Number = 0;
+        //        }
+
+        //    }
+        //    ho_Region.Dispose();
+        //    ho_RegionOpening.Dispose();
+        //    ho_ConnectedRegions.Dispose();
+        //    ho_Rectangle1.Dispose();
+        //    ho_Rectangle2.Dispose();
+        //    ho_Rectangle3.Dispose();
+        //    ho_RegionUnion.Dispose();
+        //    ho_ConnectedRegions1.Dispose();
+        //    ho_DestRegions.Dispose();
+        //    ho_RegionDifference.Dispose();
+        //    ho_RegionUnion1.Dispose();
+        //    ho_ConnectedRegions2.Dispose();
+        //    ho_DestRegions1.Dispose();
+        //    ho_RegionUnion2.Dispose();
+        //    ho_RegionIntersection.Dispose();
+        //    ho_ConnectedRegions3.Dispose();
+        //    ho_SelectedRegions.Dispose();
+        //    ho_RegionUnion3.Dispose();
+
+        //    return;
+        //}
+
         public void Count_Num(HObject ho_MixedImage1, out HObject ho_Contours, out HTuple hv_Number)
         {
 
+
+
             // Local iconic variables 
-            HObject ho_Region, ho_RegionOpening, ho_ConnectedRegions;
+
+            HObject ho_Region, ho_Region1, ho_ConnectedRegions;
             HObject ho_Rectangle1, ho_Rectangle2, ho_Rectangle3, ho_RegionUnion;
             HObject ho_ConnectedRegions1, ho_DestRegions, ho_RegionDifference;
             HObject ho_RegionUnion1, ho_ConnectedRegions2, ho_DestRegions1;
@@ -78,7 +205,7 @@ namespace P1_CMMT
             // Initialize local and output iconic variables 
             HOperatorSet.GenEmptyObj(out ho_Contours);
             HOperatorSet.GenEmptyObj(out ho_Region);
-            HOperatorSet.GenEmptyObj(out ho_RegionOpening);
+            HOperatorSet.GenEmptyObj(out ho_Region1);
             HOperatorSet.GenEmptyObj(out ho_ConnectedRegions);
             HOperatorSet.GenEmptyObj(out ho_Rectangle1);
             HOperatorSet.GenEmptyObj(out ho_Rectangle2);
@@ -97,10 +224,12 @@ namespace P1_CMMT
             HOperatorSet.GenEmptyObj(out ho_RegionUnion3);
             //threshold (MixedImage1, Region, 0, 100)
 
+            ho_Region1.Dispose();
+            HOperatorSet.FastThreshold(ho_MixedImage1, out ho_Region1, 0, 80, 20);
+
             ho_Region.Dispose();
-            HOperatorSet.FastThreshold(ho_MixedImage1, out ho_Region, 0, 80, 20);
-            ho_RegionOpening.Dispose();
-            HOperatorSet.OpeningRectangle1(ho_Region, out ho_RegionOpening, 100, 1);
+            HOperatorSet.OpeningRectangle1(ho_Region1, out ho_Region, 150, 1);
+
 
             ho_ConnectedRegions.Dispose();
             HOperatorSet.Connection(ho_Region, out ho_ConnectedRegions);
@@ -162,8 +291,9 @@ namespace P1_CMMT
                 }
 
             }
+
             ho_Region.Dispose();
-            ho_RegionOpening.Dispose();
+            ho_Region1.Dispose();
             ho_ConnectedRegions.Dispose();
             ho_Rectangle1.Dispose();
             ho_Rectangle2.Dispose();
@@ -183,6 +313,8 @@ namespace P1_CMMT
 
             return;
         }
+
+
 
         public void stitch_image(HObject ho_Image1Bmp, HObject ho_Image2Bmp, out HObject ho_TiledImage)
         {
